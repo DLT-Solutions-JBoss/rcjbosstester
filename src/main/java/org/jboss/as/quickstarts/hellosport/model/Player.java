@@ -24,6 +24,9 @@ public class Player {
         @Column(name= "position")
         String position;
 
+        @Column(name= "team_id")
+        int teamId;
+
         public Player()
         {
         }
@@ -60,4 +63,11 @@ public class Player {
                 this.position = position;
         }
 
+        public int getTeamId() {
+                return teamId;
+        }
+
+        public void setTeamId(int teamId) {
+                this.teamId = teamId;
+        }
 }
