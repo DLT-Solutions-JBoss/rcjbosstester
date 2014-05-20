@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `player`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `player` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(50) NOT NULL,  
   `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
   `position` varchar(10) DEFAULT NULL,
   `team_id` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
