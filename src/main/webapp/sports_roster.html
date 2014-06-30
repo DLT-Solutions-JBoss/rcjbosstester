@@ -114,9 +114,16 @@ function loadRoster(sport, teamName, teamId)
    restRosterHttp.open("GET","/rest/"+sport+"/team/"+teamId,true);
    restRosterHttp.send();
 }
+
+function getUrl()
+{
+        var x = location.protocol + '//' + location.hostname;
+        document.getElementById("loco").innerHTML = x;
+}
+
 </script>
 </head>
-<body>
+<body onload="getUrl()">
 
 <button type="button" onclick="loadTeams('NFL')">Get NFL Team Info</button>
 <button type="button" onclick="notSupportedTeams('NBA')">Get NBA Team Info</button>
@@ -145,6 +152,6 @@ function loadRoster(sport, teamName, teamId)
 </tr>
 </table>
 
-<h3>This page is being generated from http://rcjbosstester-dltjbossmw.rhcloud.com</h3>
+<h5>This page is being generated from <p id="loco"></p></h5>
 </body>
 </html>
