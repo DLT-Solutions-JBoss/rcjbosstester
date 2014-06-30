@@ -27,6 +27,11 @@ table.gridtable td {
 }
 </style>
 <script>
+function notSupportedTeams(sport)
+{
+        alert("The "+sport+" rosters are not supported in your deployment.")
+}
+
 function loadTeams(sport)
 {
    var restTeamHttp;
@@ -114,9 +119,9 @@ function loadRoster(sport, teamName, teamId)
 <body>
 
 <button type="button" onclick="loadTeams('NFL')">Get NFL Team Info</button>
-<button type="button" onclick="loadTeams('NBA')">Get NBA Team Info</button>
+<button type="button" onclick="notSupportedTeams('NBA')">Get NBA Team Info</button>
 <button type="button" onclick="loadTeams('NHL')">Get NHL Team Info</button>
-<button type="button" onclick="loadTeams('MLB')">Get MLB Team Info</button>
+<button type="button" onclick="notSupportedTeams('MLB')">Get MLB Team Info</button>
 
 <h1>Sports Rosters</h1>
 <table>
@@ -134,9 +139,9 @@ function loadRoster(sport, teamName, teamId)
 <table>
 <tr>
 <td><a href="javascript:loadTeams('NFL')"><img src="/images/nfl-logo.jpg" alt="NFL" height="85" width="100"></a></td>
-<td><a href="javascript:loadTeams('NBA')"><img src="/images/nba-logo.jpg" alt="NBA" height="100" width="100"></a></td>
+<td><a href="javascript:notSupportedTeams('NBA')"><img src="/images/nba-logo.jpg" alt="NBA" height="100" width="100"></a></td>
 <td><a href="javascript:loadTeams('NHL')"><img src="/images/nhl-logo.jpg" alt="NHL" height="100" width="100"></a></td>
-<td><a href="javascript:loadTeams('MLB')"><img src="/images/mlb-logo.jpg" alt="MLB" height="85" width="100"></a></td>
+<td><a href="javascript:notSupportedTeams('MLB')"><img src="/images/mlb-logo.jpg" alt="MLB" height="85" width="100"></a></td>
 </tr>
 </table>
 
