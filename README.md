@@ -8,7 +8,9 @@ Create an account in your OpenShift environment.
 
 
 Create a scaling JBoss EAP application
-```rhc create-app rcjbosstester jbosseap-6 -s```
+```
+rhc create-app rcjbosstester jbosseap-6 -s
+```
 
 Add this upstream rcjbosstester repo
 ``` 
